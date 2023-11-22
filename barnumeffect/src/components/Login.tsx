@@ -104,9 +104,9 @@ const LoginForm = () => {
     // <div className="min-h-screen flex items-center justify-center bg-white-100 py-12 px-4 sm:px-6 lg:px-8 rounded-lg shadow-lg">
     <div
       className="min-h-screen flex items-center justify-center bg-center bg-cover"
-      style={{
-        backgroundImage: `url(${backgroundPic})`,
-      }}
+      // style={{
+      //   backgroundImage: `url(${backgroundPic})`,
+      // }}
     >
       {/* <div className="max-w-md w-full space-y-8 bg-white-900 p-6 rounded-lg shadow-lg"> */}
 

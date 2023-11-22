@@ -35,9 +35,9 @@ function App() {
         <div className={`transition-content ${visible ? "visible" : ""}`}></div>
         <div
           className="min-h-screen flex items-center justify-center bg-center bg-cover"
-          style={{
-            backgroundImage: `url(${backgroundPic})`,
-          }}
+          // style={{
+          //   backgroundImage: `url(${backgroundPic})`,
+          // }}
         >
           <div className="bg-blue-400 p-8  bg-opacity-30 rounded-lg shadow-md w-full max-w-md mx-auto border border-black">
             <h2
