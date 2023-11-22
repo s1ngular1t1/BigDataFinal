@@ -33,11 +33,11 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
             <Route
               path="/"
               element={<App />}
-            >
-            <Route index element={<App />} />
+            />
+            
             <Route path="/login" element={<LoginForm />} />
     
-            </Route>
+            
           </Routes>
         </React.StrictMode>
     </BrowserRouter>

@@ -54,10 +54,10 @@ const LoginForm = () => {
 
   const navigate = useNavigate();
 
-  const [validateUser, validatedUser] = useMutation(VERIFY_USER);
-  //const validatedUser = useQuery(VERIFY_USER); //the response implies that the user has been validated in the backend
+  // const [validateUser, validatedUser] = useMutation(VERIFY_USER);
+  // //const validatedUser = useQuery(VERIFY_USER); //the response implies that the user has been validated in the backend
 
-  const [confirmPasswordError, setConfirmPasswordError] = useState<string>("");
+  // const [confirmPasswordError, setConfirmPasswordError] = useState<string>("");
 
   const [formData, setFormData] = useState({
     password: "",
@@ -72,32 +72,32 @@ const LoginForm = () => {
   const handleSubmit = async (e: any) => {
     e.preventDefault();
 
-    // Send data to the backend/API for login validation
-    try {
-      const { username, password } = formData; //destructuring the data to be passed as a req in createUser
-      //graphql req: input payload
-      const input = {
-        username, //this value has to be passed in from the signup flow to establish the relationship
-        password,
-      };
+    // // Send data to the backend/API for login validation
+    // try {
+    //   const { username, password } = formData; //destructuring the data to be passed as a req in createUser
+    //   //graphql req: input payload
+    //   const input = {
+    //     username, //this value has to be passed in from the signup flow to establish the relationship
+    //     password,
+    //   };
 
-      try {
-        const signedUser = await validateUser({
-          variables: { input }, //the input has to match the input schema type defined in backend
-        });
-        // signedUserData = signedUser["userLogin"]
-        console.log("API response:", signedUser.data);
-        navigate("/home", { state: { signedUser } });
-      } catch (error) {
-        console.error("API error:", error);
-        alert("incorrect credentials");
-        // Handle the error, e.g., show error message, etc.
-      }
-    } catch (error) {
-      console.error("API error:", error);
-      // Handle the error, e.g., show error message, etc.
-      //implement toastify
-    }
+    //   try {
+    //     const signedUser = await validateUser({
+    //       variables: { input }, //the input has to match the input schema type defined in backend
+    //     });
+    //     // signedUserData = signedUser["userLogin"]
+    //     console.log("API response:", signedUser.data);
+    //     navigate("/home", { state: { signedUser } });
+    //   } catch (error) {
+    //     console.error("API error:", error);
+    //     alert("incorrect credentials");
+    //     // Handle the error, e.g., show error message, etc.
+    //   }
+    // } catch (error) {
+    //   console.error("API error:", error);
+    //   // Handle the error, e.g., show error message, etc.
+    //   //implement toastify
+    // }
   };
 
   return (
